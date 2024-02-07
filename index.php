@@ -7,9 +7,8 @@ echo "<h3>HelpDesk support site</h3>";
 
 foreach ( group_list() as $key => $value ) {
 
-	//echo '<a href="eksempler.php?id=' . $value['id'] . '" >' . $value['name'] . '</a><br>';
-	echo '<a href="index.php?id=' . $value['id'] . '" >' . $value['name'] . '</a><br>';
+	echo '<a href="index.php?id=' . $value['id'] . '&group=' . $value['name'] . '" class="btn btn-success">' . $value['name'] . '</a> ';
 
 }
 echo "<hr>";
-echo '<iframe src="eksempler.php?id=' . $_GET['id'] . '" height="800" width="1600" title="Iframe Example"></iframe>';
+echo '<iframe src="eksempler.php?id=' . $_GET['id'] . '&group=' . $_GET['group'] . '" height="100%" width="100%" title="" frameBorder="0"></iframe>';
